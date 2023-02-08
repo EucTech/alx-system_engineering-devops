@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lan pwd cd /boot
+ls -lan /0x00-shell_basics /home /boot
