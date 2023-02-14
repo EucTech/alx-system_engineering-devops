@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $((base#number))
+echo $((2#10))
