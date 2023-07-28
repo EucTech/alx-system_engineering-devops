@@ -7,5 +7,5 @@ value="Best School"
 
 for ((n=1; n<=10; n++))
 do
-	echo $value
+	echo "$value"
 done
