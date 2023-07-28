@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Using while loop to print best school
+
+value="Best School"
+cal=1
+
+while [ $cal -le 10 ]
+do
+	echo "$value"
+	((cal++))
+done
