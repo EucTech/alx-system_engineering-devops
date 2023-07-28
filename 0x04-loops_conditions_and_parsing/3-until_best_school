@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# using until to print best school
+
+ct=1
+val="Best School"
+
+until [ $ct -gt 10 ]
+do
+	echo "$val"
+	((ct++))
+done
