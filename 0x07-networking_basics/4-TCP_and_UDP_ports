@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# bash for TUP and UDP
+netstat -lp
