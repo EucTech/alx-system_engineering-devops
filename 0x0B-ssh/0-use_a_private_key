@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# A script that uses ssh to connect to my server
+
+ssh ubuntu@54.237.46.62
