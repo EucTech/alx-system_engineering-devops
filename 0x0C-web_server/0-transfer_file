@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This is a bash script that transfers a file
+# This is a bash script will that transfers a file
 # from our client to a server
 
 if [ "$#" -lt 3 ]; then
