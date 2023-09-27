@@ -11,7 +11,7 @@ echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
 
 echo "server {
     listen 80;
-    server_name _; # Replace with your domain or server IP address
+    server_name _;
 
     error_page 404 /custom_404.html;
 
