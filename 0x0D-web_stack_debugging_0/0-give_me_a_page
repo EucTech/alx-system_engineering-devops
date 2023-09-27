@@ -1,0 +1,5 @@
+# After pulling the container holbertonschool/265-0 
+# I ran docker exec -it 7a4e846f8d00 /bin/bash, this 7a4e846f8d00 is the containers id.
+# The start the webserver by running 
+service apache2 start
+
