@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This is a bash script that install nginx in a server and add a customHTTP header
+
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get -y install nginx
+set_header='add_header X-Served-By 257227-web-02;'
+sudo sed -i '/location \/ {/a '"$set_header" /etc/nginx/sites-available/default
+sudo service nginx restart
