@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This is a bash script that install nginx in a server and add a customHTTP header
+# This is a bash script that install nginx in a server add a customHTTP header
 
 sudo apt-get -y update
 sudo apt-get -y upgrade
