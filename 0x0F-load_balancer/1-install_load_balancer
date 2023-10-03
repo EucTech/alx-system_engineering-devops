@@ -10,7 +10,7 @@ sudo add-apt-repository -y ppa:vbernat/haproxy-2.8
 sudo apt-get -y update
 sudo apt-get install -y haproxy=2.8.\*
 
-# To configure HAProxy 
+# To configure HAProxy load balance 
 echo "frontend http
 	bind *:80
 	mode http
