@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# This is  a Bash script that will display information about subdomains
+
+display_domain_info()
+{
+    value="$2.$1"
+    subdomain="$2"
+    # extracts the details from the DNS
+    details="$(dig "$value" | grep 'ANSWER SECTION' -A1 | awk 'NR==2')"
+    # Gets the IP Address
+    ip_address=$(echo "$details" | awk '{print $5}')
+    # Gets the DNS record type
+    type_of_record=$(echo "$details" | awk '{print $4}')
+    # displays the information
+    echo The subdomain "$subdomain" is a "$type_of_record" record and points to "$ip_address"
+}
+
+# Check if a specific subdomain argument is provided
+if [ -z "$2" ]
+then   
+    subdomains="www lb-01 web-01 web-02"
+    for it in $subdomains; do
+	display_domain_info "$1" "$it"
+    done
+else
+    display_domain_info "$1" "$2"
+fi
