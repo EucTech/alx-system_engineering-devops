@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# A script that debbug to find what is keeping Ubuntu container’s Nginx installation from listening on port 80
+
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default 
+sudo service nginx start

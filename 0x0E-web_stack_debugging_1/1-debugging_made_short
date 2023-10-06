@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# A script that fix my ubuntu container
+cp -f /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
+rm -f /run/nginx.pid
