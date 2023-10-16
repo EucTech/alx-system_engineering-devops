@@ -1,0 +1,4 @@
+sudo sysctl -w net.ipv4.ip_forward=1
+sudo iptables -t nat -A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80
+sudo ufw route allow 8080/tcp
+sudo service ufw restart
