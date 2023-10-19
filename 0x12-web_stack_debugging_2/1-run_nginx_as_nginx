@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This is a script fix a container so that Nginx is running as the nginx user.
+
+sudo chmod 744 etc/nginx/nginx.conf
+sudo sed -i 's/80/8080/g' /etc/nginx/sites-available/default
+sudo sed -i "s/www-data/nginx/g" /etc/nginx/nginx.conf
+sudo -u nginx service nginx restart
