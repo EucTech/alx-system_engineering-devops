@@ -21,12 +21,16 @@ if __name__ == "__main__":
     employee_name = user_data.get('name')
 
     # Retrieve task records
-    todo_data = f"{api_url}/todos?id={employee_id}"
+    todo_data = f"{api_url}/todos?userId={employee_id}"
     response = requests.get(todo_data)
     todos = response.json()
 
     complete_tasks = len(todos)
-    done_task = sum(1 for task in todos if task['completed'])
+    done_task = 0
+
+    for task in todos:
+        if task['completed']:
+            done_task += 1
 
     print(f"Employee {employee_name} is done with tasks({done_task}/\
 {complete_tasks}):")
