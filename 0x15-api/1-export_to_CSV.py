@@ -2,9 +2,9 @@
 """
    This is a python script that export data in the CSV format.
 """
+import csv
 import requests
 import sys
-import csv
 
 
 if __name__ == "__main__":
@@ -28,10 +28,11 @@ if __name__ == "__main__":
     csv_file = f"{employee_id}.csv"
 
     with open(csv_file, mode='w', newline='') as file:
-        write_file = csv.writer(file)
+        write_file = csv.writer(file, quoting=csv.QUOTE_ALL)
         for task in todos:
             status = task['completed']
             title = task['title']
 
             # To write each row
             write_file.writerow([employee_id, username, status, title])
+
