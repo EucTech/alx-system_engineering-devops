@@ -35,4 +35,3 @@ if __name__ == "__main__":
 
             # To write each row
             write_file.writerow([employee_id, username, status, title])
-
