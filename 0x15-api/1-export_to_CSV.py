@@ -28,7 +28,7 @@ if __name__ == "__main__":
     csv_file = f"{employee_id}.csv"
 
     with open(csv_file, mode='w', newline='') as file:
-        write_file = csv.writer(file)
+        write_file = csv.writer(file, quoting=csv.QUOTE_ALL)
         for task in todos:
             status = task['completed']
             title = task['title']
