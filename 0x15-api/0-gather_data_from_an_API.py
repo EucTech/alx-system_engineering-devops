@@ -26,11 +26,7 @@ if __name__ == "__main__":
     todos = response.json()
 
     complete_tasks = len(todos)
-    done_task = 0
-
-    for task in todos:
-        if task['completed']:
-            done_task += 1
+    done_task = sum(1 for task in todos if task['completed'])
 
     print(f"Employee {employee_name} is done with tasks({done_task}/\
 {complete_tasks}):")
