@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     employee_id = sys.argv[1]
 
-    # get user information
+    # get the user information
     user_info = f"{api_url}/users/{employee_id}"
     response = requests.get(user_info)
     user_data = response.json()
