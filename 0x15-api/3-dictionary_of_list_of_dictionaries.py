@@ -26,8 +26,8 @@ if __name__ == "__main__":
         todos = response.json()
 
         info = [{"username": username,
-                "task": task['title'],
-                "completed": task['completed']} for task in todos]
+                 "task": task['title'],
+                 "completed": task['completed']} for task in todos]
 
         all_data[employeeId] = info
 
